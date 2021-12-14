@@ -18,11 +18,12 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
 		color:orange;
 	}
 	table,th,td{
-		background-color:white;
+		background-color:black;
 		border: 2px solid orange;
+		color:White;
 			
 	}
-	th{
+	tr,th{
 		background-color:orange);
 		
 		
@@ -30,18 +31,27 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
 </style>
 <body>
 	<h2>Buscador de Zonas</h2>
-	<form action="busca.php" method="GET">
-		<div class="input-group mb-3" style="width: 500px;px;">
+	<form name="PesquisaZonas" onsubmit="return validarFormulario()"action="busca.php" method="GET">
+		<div class="input-group mb-3" style="width:800px;">
   			<span class="input-group-text" id="inputGroup-sizing-default">Nome da Área</span>
-  			<input type="text" name="nome_area" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  			<input type="text" name="nome_area" class="form-control" placeholder="Insira o nome da Área" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 			<button class="btn btn-warning">Buscar</button>
 		</div>
 	</form>
+	<script>
+    function validarFormulario(){
+        var nomeArea = document.forms["PesquisaZonas"]["nome_area"].value;
+        if (nomeArea == "") {
+            alert("Favor digitar o nome da zona!");
+            return false;     
+        }
+    }
+</script>
 	<table class="table">
 		<tr>
-			<th>id</td>
-			<th>Zonas</td>
-			<th>Áreas</td>
+			<th>id</th>
+			<th>Zonas</th>
+			<th>Áreas</th>
 		</tr>
 		<?php while ($dado = $con->fetch_array()){ ?>
 		<tr>
