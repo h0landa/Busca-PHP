@@ -39,14 +39,20 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
 		</div>
 	</form>
 	<script>
+
     function validarFormulario(){
+			
         var nomeArea = document.forms["PesquisaZonas"]["nome_area"].value;
         if (nomeArea == "") {
-            alert("Favor digitar o nome da zona!");
-            return false;     
+
+			alert("Preencha o campo antes de continuar")
+
+            return false;
+  						
         }
-    }
+    }	
 </script>
+
 	<table class="table">
 		<tr>
 			<th>id</th>
