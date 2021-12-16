@@ -1,0 +1,23 @@
+.form-control{
+    width: 800px;
+    align-items:center;
+    margin: 0 auto;
+}
+.form-group{
+    font: 14px;
+    width: 800px;
+    align-items: center;
+    margin:0 auto;
+}
+.cadastro{
+    color:white;
+}
+.h1{
+    color:orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.body{
+    background-color:blue;
+}
+
