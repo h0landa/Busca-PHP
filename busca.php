@@ -4,7 +4,7 @@ if (!isset($_GET['nome_area'])) {
 	exit;
 }
 $nome = "%".trim($_GET['nome_area'])."%";
-$dbh = new PDO('mysql:host=localhost;dbname=estoquebd', 'root', '');
+$dbh = new PDO('mysql:host=localhost;dbname=zonas_bd', 'root', '');
 $sth = $dbh->prepare("SELECT * FROM `zonas` WHERE `Área` LIKE :nome");
 $sth->bindParam(':nome', $nome, PDO::PARAM_STR);
 $sth->execute();

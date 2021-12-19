@@ -2,7 +2,7 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "";
-$bd = "estoquebd";
+$bd = "zonas_bd";
 
 $mysqli = new mysqli($host,$usuario,$senha,$bd);
 
