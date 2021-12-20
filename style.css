@@ -1,3 +1,9 @@
+*{
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
 .form-control{
     width: 800px;
     align-items:center;
@@ -10,7 +16,7 @@
     margin:0 auto;
 }
 .cadastro{
-    color:white;
+    color:rgb(255, 255, 255);
 }
 .h1{
     color:orange;
@@ -18,7 +24,13 @@
     text-align: center;
 }
 .body{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color:blue;
+    background: linear-gradient(85deg,#0000ff, #222297);
 }
 .select_zonas{
     width: 150px;
@@ -30,4 +42,39 @@
 .zonas_titulo{
     font-weight: bold;
 }
+.container{
+    background: white;
+    min-width: 550px;
+    max-width: 40vh;
+    min-height: 100px;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    
+}
 
+button{
+    height: 40px;
+    width: 100px;
+    background: linear-gradient(45deg,#0000ff, #222297);
+}
+
+input.inserir-area{
+    width: 250px;
+    height: 25px;
+}
+
+#input_zonas{
+    padding: 3px 12px;
+    color: #333333;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#input_zonas:focus,
+#input_zonas:hover{
+    outline: none;
+    border: 1px solid #bbbbbb;
+}
