@@ -22,6 +22,7 @@
     color:orange;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    text-shadow: #000 1px 3px 2px;
 }
 .body{
     min-height: 100vh;
@@ -38,6 +39,7 @@
     top: 78px;
     padding:5px 5px 5px 50px;
     position:absolute;
+    text-align: center;
 }
 .zonas_titulo{
     font-weight: bold;
@@ -56,11 +58,12 @@
 button{
     height: 40px;
     width: 100px;
-    background: linear-gradient(45deg,#0000ff, #222297);
+    text-align: center;
+    background: rgb(255, 166, 0);
 }
 
 input.inserir-area{
-    width: 250px;
+    width: 280px;
     height: 25px;
 }
 
@@ -71,6 +74,7 @@ input.inserir-area{
     border: 1px solid #dddddd;
     cursor: pointer;
     border-radius: 5px;
+    text-align: center;
 }
 
 #input_zonas:focus,
@@ -78,3 +82,5 @@ input.inserir-area{
     outline: none;
     border: 1px solid #bbbbbb;
 }
+
+
