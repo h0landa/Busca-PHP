@@ -36,9 +36,13 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
   			<span class="input-group-text" id="inputGroup-sizing-default">Nome da Área</span>
   			<input type="text" name="nome_area" class="form-control" placeholder="Insira o nome da Área" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 			<button class="btn btn-warning">Buscar</button>
+			<button type="button" class="btn btn-link" onclick="location.href='cadastro.php'">Cadastrar nova zona</button>
 		</div>
+		
+		
 	</form>
 	<script>
+	
 
     function validarFormulario(){
 			
@@ -50,7 +54,8 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
             return false;
   						
         }
-    }	
+    }
+	
 </script>
 
 	<table class="table">
