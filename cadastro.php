@@ -50,6 +50,8 @@
     <input type="text" name="n_area" placeholder="Insira a área" class="inserir-area">
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </div>
+  
 </form>
 </body>
 </html>
+<!--"DELETE FROM `zonas` WHERE `zonas`.`id` = 248"--COMANDO PARA DELETAR ZONA NO SQL> 

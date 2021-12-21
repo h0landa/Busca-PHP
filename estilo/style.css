@@ -55,11 +55,12 @@
     
 }
 
-button{
+btn.btn-warning{
     height: 40px;
     width: 100px;
     text-align: center;
     background: rgb(255, 166, 0);
+    
 }
 
 input.inserir-area{
