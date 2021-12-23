@@ -1,14 +1,10 @@
 <?php
-if (!isset($_GET['nome_area'])) {
-	header("Location: index.php");
-	exit;
-}
-$nome = "%".trim($_GET['nome_area'])."%";
-$dbh = new PDO('mysql:host=localhost;dbname=zonas_bd', 'root', '');
-$sth = $dbh->prepare("SELECT * FROM `zonas` WHERE `Área` LIKE :nome");
-$sth->bindParam(':nome', $nome, PDO::PARAM_STR);
-$sth->execute();
-$resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+include("classe/conexão.php");
+$nome_area = "'%".trim($_GET['nome_area'])."%'";
+$consulta = "SELECT * FROM zonas WHERE Área LIKE $nome_area";
+$con = $mysqli->query($consulta) or die($mysqli->error);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,26 +24,14 @@ $resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
       	<th>Áreas</th>
    	</tr>
 </thead>
-<?php
-	if (count($resultados)) {
-		foreach($resultados as $Resultado) {
-	?>
+	<?php while ($resultado = $con->fetch_array()){ ?>
     <tr>
-      <td><?php echo $Resultado['id']; ?></td>
-      <td><?php echo $Resultado['Zona']; ?></td>
-      <td><?php echo $Resultado['Área']; ?></td>
+      <td><?php echo $resultado['id']; ?></td>
+      <td><?php echo $resultado['Zona']; ?></td>
+      <td><?php echo $resultado['Área']; ?></td>
     </tr>
+	<?php } ?>
 </table>
-		<br>
-	<?php
-		}
-
-	} else {
-	?>
-		<label>Não foram encontrados resultados pelo termo buscado.</label>
-	<?php
-	}
-	?>
 </body>
 </html>
 

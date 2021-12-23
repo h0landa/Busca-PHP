@@ -11,9 +11,9 @@
 
 </style>
 <body class="body">
-<form name="CadastroZonas" method="GET" action="seleciona_zona.php">
+<form name="CadastroZonas" method="GET" action="msg_sucesso_cadastro.php">
   <div class="container">
-  <h1 class="h1">Cadastro de Zonas</h1>
+  <h1 class="h1">Cadastrar Zonas</h1>
   <!--pode tirar esse br se vc quiser-->
   <br>
   <select type="select" id="input_zonas" name="zonas_select">
@@ -50,8 +50,19 @@
     <input type="text" name="n_area" placeholder="Insira a área" class="inserir-area">
     <button type="submit" class="btn btn-primary">Cadastrar</button>
   </div>
-  
+  <br>
+  <br>
+
 </form>
+
+<form name= "ExcluirZonas" method="GET" action="msg_sucesso_delete.php">
+  <div class="container_delete_area">
+    <h1 class="h1">Excluir Zonas</h1>
+    <input type="text" name="id_area" placeholder="Insira o id da área que deseja excluir" class="inserir-area">
+    <button type="submit" class="btn btn-primary" style="background:red">Deletar</button>
+  </div>
+</form>
+
 </body>
 </html>
 <!--"DELETE FROM `zonas` WHERE `zonas`.`id` = 248"--COMANDO PARA DELETAR ZONA NO SQL> 

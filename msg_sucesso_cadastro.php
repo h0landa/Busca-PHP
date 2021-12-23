@@ -12,7 +12,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Zonas</title>
-    <h1>Cadastro de Zonas</h1>
+    <h1 class="h1">Cadastro de Zonas</h1>
 </head>
 <style>
     h2{
@@ -20,7 +20,7 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
     }
 </style>
 <body>
-    <h2>Zona cadastrada com sucesso!</h2>
+    <h2 style="text-align:center">Zona cadastrada com sucesso!</h2>
     
 </body>
 </html>
