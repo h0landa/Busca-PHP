@@ -44,7 +44,7 @@
 .zonas_titulo{
     font-weight: bold;
 }
-.container{
+.container_busca{
     background: white;
     min-width: 550px;
     max-width: 40vh;
@@ -52,6 +52,21 @@
     padding: 2rem;
     top: 20px;
     left: 430px;
+    margin:0 auto;
+    position: absolute;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    
+}
+.container_cadastro{
+    background: white;
+    min-width: 550px;
+    max-width: 40vh;
+    min-height: 100px;
+    padding: 2rem;
+    top: 20px;
+    left: 430px;
+    margin:0 auto;
     position: absolute;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
     border-radius: 8px;
@@ -104,4 +119,27 @@ input.inserir-area{
     color:white;
     font: bold;
 }
-
+main{                                                                                                                                                                            
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 1000px){
+    .container_busca{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+    .container_cadastro{
+        left:50%;
+        transform: translate(-50%);
+    }
+    .container_delete_area{
+        left:50%;
+        transform: translate(-50%);
+    }
+    
+   
+    
+    
+}

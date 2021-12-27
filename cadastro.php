@@ -12,7 +12,7 @@
 </style>
 <body class="body">
 <form name="CadastroZonas" method="GET" action="msg_sucesso_cadastro.php">
-  <div class="container">
+  <div class="container_cadastro">
   <h1 class="h1">Cadastrar Zonas</h1>
   <!--pode tirar esse br se vc quiser-->
   <br>

@@ -7,37 +7,37 @@ $con = $mysqli->query($consulta) or die($mysqli->error);
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link href="estilo/style.css" rel="stylesheet">
 	<title>Buscar Zonas</title>
 </head>
-
 <body class="body">
 	<form name="PesquisaZonas" onsubmit="return validarFormulario()"action="busca.php" method="GET">
-		<div class="container" style="width:800px;">
-			<img src="slogan_adriano.png">
-  			<input type="text" name="nome_area" class="inserir-area" placeholder="Insira o nome da Área">
-			<button class="btn btn-primary">Buscar</button>
-			<button type="button" class="btn btn-link" onclick="location.href='cadastro.php'" style="text-align:center">Cadastrar nova zona</button>
-		</div>
+	<div class="container_busca" style="width:800px;">
+	<img src="slogan_adriano.png">
+	<input type="text" name="nome_area" class="inserir-area" placeholder="Insira o nome da Área">
+	<button class="btn btn-primary">Buscar</button>
+	<button type="button" class="btn btn-link" onclick="location.href='cadastro.php'" style="text-align:center">Cadastrar nova zona</button>
+	</div>
 	</form>
 	<script>
-	
-
-    function validarFormulario(){
-			
-        var nomeArea = document.forms["PesquisaZonas"]["nome_area"].value;
-        if (nomeArea == "") {
-
+		function validarFormulario(){
+				
+			var nomeArea = document.forms["PesquisaZonas"]["nome_area"].value;
+			if (nomeArea == "") {
 			alert("Preencha o campo antes de continuar")
-
-            return false;
-  						
-        }
-    }
+		
+				return false;
+								  
+			}
+		}
+		
+	</script>
+		
+	</body>
 	
-</script>
-</body>
 </html>
+
