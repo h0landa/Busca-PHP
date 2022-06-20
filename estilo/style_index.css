@@ -1,21 +1,28 @@
-.corpo{
-    font-family: "Poppins",sans-serif;
-    min-height: 50px;
-    min-width: 50px;
-    align-items: center;
-    justify-content: center;
-    background-color:blue;
-    background: linear-gradient(85deg,#0000ff, #222297);
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+h1{
+    font-family: 'League Gothic';
+    font-size: 3em;
+    color: black;
+    text-align: center;
+    top: 0;
 }
-
 .table{
     width: 1000px;
+    margin: auto;
     text-align: center;
     background: white;
-    border: 1px;
-    border-radius: 8px;
     align-items: center;
-
+}
+#voltar{
+    margin-top: 10px;
+    border-radius: 50%;
+    margin-left: 6px;
+    width: 50px;
+    background-color: white;
+}
+#voltar:hover{
+    background-color: orange;
 }
 .th,td{
     text-align: center;
@@ -28,11 +35,6 @@ thead{
 .enunciado_pagina{
     color:orange;
 }
-.btn.btn-link{
-    color:white;
-}
 .formulario_pesquisa{
     margin:10px;
-    
-    
 }
